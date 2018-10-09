@@ -1,0 +1,244 @@
+/***  Media Query - Desktop and above ***/
+@media screen and (min-width: 1000px) {
+	/*** Global ***/
+	.grid2 {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin: 0 auto;
+		height: 100vh;
+		align-items: center;
+		justify-content: center;
+		grid-auto-flow: dense;
+	}
+
+	.grid3 {
+		display: grid;
+		grid-template-columns: auto 60% auto;
+		height: 60vh;
+	}
+
+	.content-right {
+		padding: 20px 80px;
+	}
+
+	hr {
+		display: none;
+	}
+
+	h1 {
+		font-size: 36px;
+		line-height: 1.2;
+		padding: 1em 0;
+		text-align: left;
+	}
+
+	p {
+		font-size: 22px;
+	}
+
+	#menu {
+		display: none;
+	}
+
+	/*** Header ***/
+	body header {
+		.nav-link {
+			visibility: visible;
+			align-items: flex-end;
+			a {
+				color: $white;
+				margin: 0 10px;
+				&:hover {
+					border-bottom: 4px solid $white;
+				}
+				&#btn-Signup {
+					background-color: transparent;
+					padding: .5em 1.25em;
+					margin-left: 10px;
+					border: 2px solid $white;
+					border-radius: 500px;
+					transition: .2s;
+					&:hover {
+						background-color: $white;
+						color: $primary;
+					}
+				}
+			}
+		}
+		.content-left {
+			padding: 0 70px;
+			margin-top: -100px;
+			h1 {
+				padding-top: 0;
+			}
+			p,
+			.download-app {
+				display: block;
+
+				p {
+					font-size: 16px;
+					padding-top: 20px;
+					padding-bottom: 40px;
+				}
+			}
+			p {
+				opacity: 0.8;
+			}
+		}
+		.content-right {
+			img {
+				width: 430px;
+			}
+		}
+	}
+
+	/*** Features ***/
+	#feature-1,
+	#feature-2,
+	#feature-3,
+	#feature-4,
+	#feature-5 {
+		padding: 0;
+		h1 {
+			text-align: center;
+		}
+	}
+
+	#feature-2,
+	#feature-4 {
+		.content-left {
+			grid-column: 2;
+		}
+	}
+
+	#feature-1,
+	#feature-2 {
+		img {
+			width: 250px;
+		}
+	}
+
+	#feature-3 {
+		.content-right {
+			padding-top: 0;
+		}
+		.content-left {
+			padding-top: 140px;
+			img {
+				width: 450px;
+			}
+		}
+	}
+	#feature-4 {
+		.content-left {
+			img {
+				width: 80%;
+			}
+		}
+		#btn-info {
+			margin: 2em 0;
+		}
+	}
+	#feature-5 {
+		.content-wrap {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			#btn-download {
+				width: 40%;
+			}
+		}
+	}
+
+	/*** Footer ***/
+	footer {
+		.content-wrap {
+			grid-column-start: 2;
+			grid-column-end: 3;
+		}
+		#subscribe {
+			display: flex;
+			width: 60%;
+			input {
+				margin-bottom: 0;
+				padding: .5em 1em;
+				border-radius: 2em 0 0 2em;
+			}
+			button {
+				width: 4em;
+				padding: .3em 1em;
+				border-radius: 0 5em 5em 0;
+				font-size: 1.3em;
+			}
+		}
+	}
+}
+
+/*** Media Query - Expectional - older mobile i.e iphone 5 galaxy 4 and below ***/
+@media screen and (max-height: 600px) {
+	/*** Header ***/
+	header {
+		.content-left {
+			h1 {
+				padding-top: 0;
+			}
+		}
+		.content-right {
+			img {
+				width: 200px;
+				padding-top: 0;
+			}
+		}
+	}
+
+	/*** Features ***/
+	#feature-4 {
+		#btn-info {
+			width: 100%;
+		}
+	}
+	#feature-5 {
+		.content-wrap {
+			#btn-download {
+				margin: 0;
+				width: 100%;
+				padding: .5em;
+			}
+		}
+	}
+}
+
+/***  Media Query - Expectional - normal mobile i.e.iphone6 galaxy 9 ***/
+@media screen and (min-height: 650px) and (max-height: 700px) {
+	/*** Header ***/
+	header {
+		.content-left {
+			h1 {
+				padding-top: 50px;
+			}
+		}
+		.content-right {
+			img {
+				width: 250px;
+				padding-top: 0;
+			}
+		}
+	}
+}
+
+/*** Media Query - Expectional - plus sized mobile i.e.iphone6+ galaxy 9+ ***/
+@media screen and (min-height: 700px) and (max-height: 750px) {
+	/*** Header ***/
+	header {
+		.content-left {
+			h1 {
+				padding-top: 40px;
+			}
+		}
+		.content-right {
+			img {
+				width: 300px;
+				padding-top: 0;
+			}
+		}
+	}
+}

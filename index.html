@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zingo - Collaborate apps</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body class="preload">
+
+  <div id="side-menu">
+    <a href="#" class="close-menu" onclick="closeSideMenu()">&times;</a>
+    <a href="#feature-1" onclick="closeSideMenu()">Features</a>
+    <a href="#feature-5" onclick="closeSideMenu()">About App</a>
+    <a href="#" onclick="closeSideMenu()">Pricing</a>
+    <a href="#" id="btn-Signup" onclick="delayClose()">Sign Up</a>
+  </div>
+
+  <span id="menu">
+    <a href="#" onclick="openSideMenu()">
+      <svg viewbox="0 0 30 30" width="25" height="25" stroke="#fff">
+        <path d="M0,5 30,5" stroke-width="3" />
+        <path d="M0,14 30,14" stroke-width="3" />
+        <path d="M0,23 30,23" stroke-width="3" />
+      </svg>
+    </a>
+  </span>
+
+  <header id="header">
+    <nav>
+      <a href="#">
+        <img class="logo" src="img/Logo.png" alt="zingo-logo">
+      </a>
+      <div class="nav-link">
+        <a href="#">Features</a>
+        <a href="#">About App</a>
+        <a href="#">Pricing</a>
+        <a href="#" id="btn-Signup">Sign Up</a>
+      </div>
+    </nav>
+    <div class="content-wrap grid2">
+      <div class="content-left">
+        <h1>An instant connection makes better team everyday.</h1>
+        <p>Convenient and effective way to collaborate with your teams, peers, or partners.</p>
+        <div class="download-app">
+          <p>Available now to download from Google Play or App Store</p>
+          <a id="btn-landing" class="btn-capsule">Download App</a>
+        </div>
+      </div>
+      <div class="content-right">
+        <img class="fade-in-up" src="./img/hand_hold_task.png" alt="hand-hold-mobile">
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="feature-1">
+      <div class="content-wrap grid2">
+        <div class="content-left">
+          <img class="fade-right" src="img/daily-meeting.png" alt="mobile-daily-meeting-app">
+        </div>
+        <div class="content-right">
+          <h1 class="content-title">Keeping up-to-date</h1>
+          <p>While off grid or anywhere you go. You can have access to every collaborate meetings to keep you on track with daily events, plans, messages and stable communications with peers and teams</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="feature-2">
+      <div class="content-wrap grid2">
+        <div class="content-left">
+          <img class="fade-left" src="img/schedule.png" alt="mobile-schedule-app">
+        </div>
+        <div class="content-right">
+          <h1 class="content-title">Organize better schedule</h1>
+          <p>Embrace yourself last mintue plan? Get easy access into your personalized calendar which allow you to organize your schedule and time. Every teams will be notified instantly.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="feature-3">
+      <div class="content-wrap grid2">
+        <div class="content-left">
+          <img class="fade-right" src="img/chat.png" alt="mobile-chat-app">
+        </div>
+        <div class="content-right">
+          <div class="text-content">
+            <h1 class="content-title">Stay in touch</h1>
+            <p>Chatting is simple and fun! Send one-on-one and group text to your peers and teams anytime. With far-fetched features. It can, secrue messages with end-to-end encryption, seamlessly sync all of your chats from your device to personal computers, make video calls for free, schedule chat meets with alert and manymore.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feature-4">
+      <div class="content-wrap grid2">
+        <div class="content-left">
+          <img src="img/Node and Connection.png" alt="mobile-node-connection">
+        </div>
+        <div class="content-right">
+          <h1 class="content-title">Collaborate & Connect</h1>
+          <p>Initiate the connection, invite your teams or peer and collaborate anytime, anywhere.
+            <br>Brining anyone closer together through simple and efficient experiences beyond.</p>
+          <a id="btn-info" class="btn-capsule">Get Info</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="feature-5" class="grid3">
+      <div class="content-wrap">
+        <h1 class="content-title">Get Zingo Today!</h1>
+        <p>Download Zingo today from Google Play or App Store</p>
+        <a href="#" id="btn-download" class="btn-capsule">Download App</a>
+      </div>
+    </section>
+
+    <footer class="grid3">
+      <div class="content-wrap">
+        <h1>Subscribe to our updates</h1>
+        <div id="subscribe" class="box">
+          <input type="text" placeholder="Enter your email">
+          <button class="send">
+            <img src="img/flyer-send.svg" alt="paper-plane-send">
+          </button>
+        </div>
+        <div id="social-media" class="box">
+          <div class="sphere">
+            <img src="img/twitter.svg" alt="twitter">
+          </div>
+          <div class="sphere">
+            <img src="img/facebook.svg" alt="facebook">
+          </div>
+          <div class="sphere">
+            <img src="img/instagram.svg" alt="instagram">
+          </div>
+        </div>
+        <div id="footbase" class="box">
+          <p>&copy; Copyright 2018 &mdash; <span>Zingo</span> by Arthur Prather,Jr. All Rights Reserved.</p>
+          <div class="foot-link">
+            <a href="#">Privacy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Report an Error</a>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

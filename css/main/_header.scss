@@ -1,0 +1,103 @@
+/*** Mobile Menu ***/
+#menu {
+	position: fixed;
+	background-color: rgba($secondary, $alpha: 0.4);
+	right: 0;
+	width: 100%;
+	height: 50px;
+	display: block;
+	transition: top 0.3s;
+	a {
+		position: relative;
+		top: 20%;
+		left: 90%;
+	}
+}
+
+#side-menu {
+	background-color: $secondary;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	padding-top: 100px;
+	overflow: hidden;
+	transform: translate3d(-100vw, 0, 0);
+	transition: transform .3s cubic-bezier(0, 0.52, 0, 1);
+	z-index: 1;
+	&.show {
+		transform: translate3d(0vw, 0, 0);
+	}
+	.close-menu {
+		position: absolute;
+		top: -20px;
+		right: 30px;
+		font-size: 60px;
+		font-weight: 100;
+	}
+	a {
+		text-align: center;
+		display: block;
+		color: $white;
+		font-size: 22px;
+		font-weight: 200;
+		padding: 10px 0;
+	}
+	#btn-Signup {
+		background-color: $white;
+		color: $primary;
+		width: 50%;
+		margin: 0 auto;
+		margin-top: 50px;
+		padding: .5;
+		border-radius: 500px;
+		&:focus {
+			background-color: transparent;
+			color: $white;
+			border: 2px solid $white;
+		}
+	}
+}
+
+/*** Header ***/
+header {
+	background-color: $primary;
+	background-image: url('../img/background.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: $white;
+	height: 100vh;
+	min-height: 600px;
+	overflow-y: hidden;
+	nav {
+		display: flex;
+		justify-content: space-between;
+		width: 88%;
+		margin: 0 auto;
+		padding-top: 2em;
+	}
+	.logo {
+		align-items: flex-start;
+		width: 120px;
+	}
+	.nav-link {
+		visibility: hidden;
+	}
+	.content-left {
+		h1 {
+			padding-top: 100px;
+		}
+		p,
+		.download-app {
+			display: none;
+		}
+	}
+	.content-right {
+		img {
+			width: 320px;
+			margin-top: 20px;
+		}
+	}
+}

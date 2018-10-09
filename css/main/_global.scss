@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
+/* core settings */
+* {
+	font-family: 'Poppins', sans-serif;
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $bgColor;
+	color: $textColor;
+	margin: 0;
+	padding: 0;
+	font-size: 1.2em;
+	line-height: 1.5;
+	border: 0;
+	outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	font-weight: 600;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+/* core (optional) */
+*:focus {
+	outline: none;
+}
+
+button {
+	border: none;
+}
+
+/* core style */
+h1 {
+	font-size: 28px;
+	line-height: 1.2;
+	padding: 1em 0;
+	text-align: center;
+}
+
+p {
+	padding-bottom: 1em;
+	font-size: 18px;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	margin: 20px 0;
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.75),
+		rgba(0, 0, 0, 0)
+	);
+}
+
+.content-wrap {
+	width: 88%;
+	margin: 0 auto;
+}
+
+.btn-capsule {
+	display: block;
+	background-color: $white;
+	color: $primary;
+	width: 50%;
+	margin: .5em 0;
+	padding: .5em 0;
+	text-align: center;
+	font-size: 500;
+	border-radius: 500px;
+	transition: .2s;
+	cursor: pointer;
+	&:hover {
+		background-color: darken($white, 15%);
+	}
+}
+
+//Animation -------------------------------------------
+body.preload * {
+	animation-duration: 0s !important;
+	-webkit-animation-duration: 0s !important;
+	transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s,
+		padding 0s, margin 0s !important;
+}
+
+@media screen and (min-width: 1000px) {
+	//header only
+	.fade-in-up {
+		opacity: 0;
+		transform: translateY(100px);
+		transition: .5s ease-out;
+	}
+	.load {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	//features with images
+	.fade-left {
+		opacity: 0;
+		transform: translateX(100px);
+		&.is-active {
+			opacity: 1;
+			transform: translateX(0);
+			transition: all 1s ease;
+			transition-delay: .6s;
+		}
+	}
+
+	.fade-right {
+		opacity: 0;
+		transform: translateX(-100px);
+		&.is-active {
+			opacity: 1;
+			transform: translateX(0);
+			transition: all 1s ease;
+			transition-delay: .6s;
+		}
+	}
+}
